@@ -1,0 +1,4 @@
+student_name
+student2
+total_price
+my_age
