@@ -1,41 +1,19 @@
-nimi = "Pavel"
-punktid = 92
-puudumised = 0
-tood_esitatud = "jah"
+print("Tartu Rakenduslik Kolledž")
+print("Õpilase päev")
 
-# Hinde määramine
-if punktid >= 90:
-    hinne = 5
-elif punktid >= 75:
-    hinne = 4
-elif punktid >= 50:
-    hinne = 3
-elif punktid >= 20:
-    hinne = 2
-else:
-    hinne = 1
+nimi = input("Sisesta oma nimi: ")
+vanus = int(input("Sisesta vanus: "))
+koolitee = float(input("Sisesta koolitee pikkus kilomeetrites: "))
+aeg = int(input("Sisesta koolitee kestus minutites: "))
 
-print("Õpilane:", nimi)
-print("Hinne:", hinne)
+jargmine_vanus = vanus + 1
+meetrites = koolitee * 1000
+tunnid = aeg // 60
+minutid = aeg % 60
+kiirus = koolitee / (aeg / 60)
 
-# Puudumiste kontroll
-if puudumised > 10:
-    print("Hoiatus: liiga palju puudumisi.")
-else:
-    print("Puudumiste arv on lubatud.")
-
-# Tööde kontroll
-if tood_esitatud == "jah":
-    print("Kõik tööd on esitatud.")
-else:
-    print("Kõik tööd ei ole esitatud.")
-
-# Aine läbimise kontroll
-if hinne >= 3 and puudumised <= 10 and tood_esitatud == "jah":
-    print("Aine on läbitud.")
-else:
-    print("Aine ei ole läbitud.")
-
-# OR tingimus
-if hinne == 1 or hinne == 2:
-    print("Hinne on alla rahuldava.")
+print("Tere, " + nimi + "!")
+print("Järgmisel aastal oled", jargmine_vanus, "aastane.")
+print("Sinu koolitee pikkus on", meetrites, "meetrit.")
+print("Koolitee kestab", tunnid, "tundi ja", minutid, "minutit.")
+print("Keskmine kiirus on", round(kiirus, 1), "km/h.")
