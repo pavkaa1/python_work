@@ -1,3 +1,4 @@
-pikkus = 10
-laius = 5
+pikkus = float(input("Sisesta ristküliku pikkus: "))
+laius = float(input("Sisesta ristküliku laius: "))
+
 print("Ristküliku pindala on", pikkus * laius)
